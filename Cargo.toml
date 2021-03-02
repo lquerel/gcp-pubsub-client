@@ -1,0 +1,31 @@
+[package]
+name = "gcp-pubsub-client"
+version = "0.0.0"
+authors = ["Laurent Querel <laurent.querel@gmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = """
+An ergonomic async client library for GCP Pub/Sub.
+"""
+homepage = "https://github.com/lquerel/gcp-pubsub-client"
+repository = "https://github.com/lquerel/gcp-pubsub-client"
+documentation = "https://docs.rs/gcp-pubsub-client"
+readme = "README.md"
+exclude = ["/.github/*"]
+keywords = ["gcp", "pubsub", "google-cloud"]
+
+[dependencies]
+yup-oauth2 = "5.0.3"
+hyper = "0.14.4"
+hyper-rustls = "0.22.1"
+thiserror = "1.0.23"
+tokio = { version = "1.2.0", features = ["full"] }
+reqwest = { version = "0.11.0", features = ["json"] }
+url = "2.2.0"
+serde = "1.0.123"
+serde_json = "1.0.63"
+log = "0.4"
+base64 = "0.13.0"
+
+[dev-dependencies]
+tokio-test = "0.4.0"
