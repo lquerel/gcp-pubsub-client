@@ -78,6 +78,12 @@ impl SubscriptionApi {
 
         let response = self.client.execute(request).await?;
 
-        process_response(response).await
+        if response.status().is_success() {
+            Ok(())
+        } else {
+            Err(BQError::ResponseError {
+                error: response.json().await?,
+            })
+        }
     }
 }
