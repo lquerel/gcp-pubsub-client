@@ -3,9 +3,7 @@ use reqwest::Client;
 
 use crate::auth::ServiceAccountAuthenticator;
 use crate::error::BQError;
-use crate::{process_response, urlencode};
-use crate::model::list_topics_response::ListTopicsResponse;
-use crate::model::topic::Topic;
+use crate::{process_response};
 use crate::model::subscription::Subscription;
 use crate::model::pull_request::PullRequest;
 use crate::model::pull_response::PullResponse;

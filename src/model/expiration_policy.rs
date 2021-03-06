@@ -1,4 +1,4 @@
-/// A policy that specifies the conditions for resource expiration (i.e., automatic resource deletion).
+//! A policy that specifies the conditions for resource expiration (i.e., automatic resource deletion).
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]

@@ -1,4 +1,4 @@
-/// Response for the `ValidateSchema` method. Empty for now.
+//! Response for the `ValidateSchema` method. Empty for now.
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]

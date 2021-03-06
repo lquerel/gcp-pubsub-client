@@ -1,12 +1,12 @@
-/// Request for the ModifyAckDeadline method.
+//! Request for the ModifyAckDeadline method.
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct ModifyAckDeadlineRequest {
 	/// Required. The new ack deadline with respect to the time this request was sent to the Pub/Sub system. For example, if the value is 10, the new ack deadline will expire 10 seconds after the `ModifyAckDeadline` call was made. Specifying zero might immediately make the message available for delivery to another subscriber client. This typically results in an increase in the rate of message redeliveries (that is, duplicates). The minimum deadline you can specify is 0 seconds. The maximum deadline you can specify is 600 seconds (10 minutes).
-	pub ack_deadline_seconds: Option<i32>,
+	pub ack_deadline_seconds: i32,
 	/// Required. List of acknowledgment IDs.
-	pub ack_ids: Option<Vec<String>>,
+	pub ack_ids: String,
 }
 
 
